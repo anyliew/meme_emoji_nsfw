@@ -16,6 +16,7 @@
 ## meme_emoji_nsfw 表情包扩展仓库 
 
 *🚀* 基于 [meme-generator](https://github.com/MemeCrafters/meme-generator) 做的表情包扩展仓库~
+
 *✨* 为你的聊天机器人添加更多趣味表情生成！
 
 > [!WARNING]
@@ -79,7 +80,7 @@
 
 ## 📄 使用教程 
 
-- [meme_emoji wiki](https://github.com/anyliew/meme_emoji/wiki) 
+- [meme_emoji_nsfw wiki](https://github.com/anyliew/meme_emoji_nsfw/wiki) 
 
 
 ## ⚖ 许可证
