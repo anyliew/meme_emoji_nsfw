@@ -48,5 +48,5 @@ jobs:
           检测到表情和素材新增或者修改🧐~ 
           😆自动更新同步表情包清单列表✨;
           😋Auto-generate meme_emoji_keywords.md;"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/anyliew/meme_emoji.git
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/anyliew/meme_emoji_nsfw.git
           git push origin main
