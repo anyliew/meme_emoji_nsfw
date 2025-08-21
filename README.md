@@ -91,12 +91,12 @@
 > 
 > MIT License https://github.com/anyliew/meme_emoji_nsfw/blob/main/LICENSE
 > 
->chat.deepseek https://github.com/anyliew/meme_emoji/raw/main/docs/picture/chat.deepseek.png)
+>chat.deepseek https://github.com/anyliew/meme_emoji_nsfw/raw/main/docs/picture/chat.deepseek.png)
 
 
 ## 💐 鸣谢
 
-感谢以下开发者对 meme_emoji 仓库作出的贡献
+感谢以下开发者对 meme_emoji_nsfw 仓库作出的贡献
 
 <a href="https://github.com/anyliew/meme_emoji_nsfw/graphs/contributors">
   <img src="./docs/picture/partner.jpg" />
