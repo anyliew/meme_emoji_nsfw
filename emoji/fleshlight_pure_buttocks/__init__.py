@@ -22,15 +22,17 @@ def fleshlight_pure_buttocks(images: list[BuildImage], texts: list[str], args: M
         ta = "他" if info.gender == "male" else "她"
         name = info.name or ta
 
-    text = f""
+    text = f"{name}最爱❤️"
     #{name}挚爱❤️👩‍❤️‍💋‍👨{name}愛のカップ。
     try:
         frame.draw_text(
-            (0, 1037, 339, 1106),
+            (835, 394, 1119, 464),
             text,
+            fill=(255, 255, 255),
             max_fontsize=100,
             min_fontsize=20,
-            valign="bottom",
+            lines_align="center",
+            font_families=["FZShaoEr-M11S"],
         )
     except ValueError:
         raise TextOverLength(name)
