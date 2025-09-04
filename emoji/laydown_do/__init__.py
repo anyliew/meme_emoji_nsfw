@@ -14,15 +14,15 @@ img_dir = Path(__file__).parent / "images"
 
 def laydown_do(images: list[BuildImage], texts, args):
 
-    user_head = images[0].resize((80, 80)).convert("RGBA") #.circle()
+    user_head = images[0].resize((110, 110)).convert("RGBA") 
     
     # 初始化帧列表，用于存储每一帧图像
     frames: list[IMG] = []
 
     positions = [
-        (144, 48), (145, 47), (142, 62),(142, 62), (142, 62), # 1-5
-        (142, 86), (142, 88), (143, 87),(142, 52), (142, 52), # 5-10
-        (142, 52), # 11
+        (135, 18), (135, 18), (136, 33),(136, 33), (136, 33), # 1-5
+        (133, 61), (133, 61), (133, 61),(138, 26), (138, 26), # 5-10
+        (138, 26), # 11
     ]
 
     # 处理所有帧

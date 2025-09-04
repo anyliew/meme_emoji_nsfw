@@ -14,13 +14,13 @@ img_dir = Path(__file__).parent / "images"
 
 def sitdown_do(images: list[BuildImage], texts, args):
 
-    user_head = images[0].resize((165, 165)).convert("RGBA") #.circle()
+    user_head = images[0].resize((215, 215)).convert("RGBA") 
     
     # 初始化帧列表，用于存储每一帧图像
     frames: list[IMG] = []
 
     positions = [
-        (192, 100), (192, 115), (196, 160), # 1-3
+        (180, 55), (180, 68), (181, 111), # 1-3
     ]
 
     # 处理所有帧
@@ -48,5 +48,5 @@ add_meme(
     keywords=["坐撅"],  # 搜索关键词
     tags=MemeTags.wuthering_waves,
     date_created=datetime(2025, 8, 21),  # 创建日期
-    date_modified=datetime(2025, 8, 21),  # 修改日期
+    date_modified=datetime(2025, 9, 4),  # 修改日期
 )
