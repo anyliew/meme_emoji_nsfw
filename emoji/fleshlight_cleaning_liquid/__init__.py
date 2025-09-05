@@ -22,15 +22,16 @@ def fleshlight_cleaning_liquid(images: list[BuildImage], texts: list[str], args:
         ta = "他" if info.gender == "male" else "她"
         name = info.name or ta
 
-    text = f""
-    #{name}挚爱❤️👩‍❤️‍💋‍👨{name}愛のカップ。
+    text = f"{name}の❤️最爱"
     try:
         frame.draw_text(
-            (0, 1037, 339, 1106),
+            (13, 1039, 430, 1189),
             text,
+            fill=(255, 255, 255),
             max_fontsize=100,
             min_fontsize=20,
-            valign="bottom",
+            lines_align="center",
+            font_families=["FZKaTong-M19S"],
         )
     except ValueError:
         raise TextOverLength(name)
@@ -51,5 +52,5 @@ add_meme(
     max_texts=1,
     keywords=["清洗液"],
     date_created=datetime(2025, 3, 13),
-    date_modified=datetime(2025, 3, 13),
+    date_modified=datetime(2025, 9, 5),
 )

@@ -26,21 +26,20 @@ def fleshlight_pure_buttocks(images: list[BuildImage], texts: list[str], args: M
     #{name}挚爱❤️👩‍❤️‍💋‍👨{name}愛のカップ。
     try:
         frame.draw_text(
-            (835, 394, 1119, 464),
+            (840, 393, 1200, 464),
             text,
             fill=(255, 255, 255),
-            max_fontsize=100,
-            min_fontsize=20,
-            lines_align="center",
+            max_fontsize=60,
+            min_fontsize=15,
+            lines_align="left",
             font_families=["FZShaoEr-M11S"],
         )
     except ValueError:
         raise TextOverLength(name)
 
     def make(imgs: list[BuildImage]) -> BuildImage:
-        img = imgs[0].convert("RGBA").circle().resize((920, 920))
-        img = img.rotate(-15, expand=True)
-        return frame.copy().paste(img, (-160, -50), alpha=True, below=True)
+        img = imgs[0].convert("RGBA").circle().resize((860, 860))
+        return frame.copy().paste(img, (-64, 81), alpha=True, below=True)
 
     return make_jpg_or_gif(images, make)
 
@@ -54,5 +53,5 @@ add_meme(
     max_texts=1,
     keywords=["纯洁臀"],
     date_created=datetime(2025, 3, 13),
-    date_modified=datetime(2025, 3, 13),
+    date_modified=datetime(2025, 9, 5),
 )

@@ -22,15 +22,16 @@ def fleshlight_hoshino_alice(images: list[BuildImage], texts: list[str], args: M
         ta = "他" if info.gender == "male" else "她"
         name = info.name or ta
 
-    text = f""
-    #{name}挚爱❤️👩‍❤️‍💋‍👨{name}愛のカップ。
+    text = f"{name}の❤️最爱"
     try:
         frame.draw_text(
-            (0, 1037, 339, 1106),
+            (683, 1115, 1200, 1200),
             text,
+            fill=(255, 255, 255),
             max_fontsize=100,
             min_fontsize=20,
-            valign="bottom",
+            lines_align="left",
+            font_families=["FZKaTong-M19S"],
         )
     except ValueError:
         raise TextOverLength(name)
@@ -51,5 +52,5 @@ add_meme(
     max_texts=0,
     keywords=["啦啦队偶像","拉拉队偶像"],
     date_created=datetime(2025, 3, 13),
-    date_modified=datetime(2025, 6, 13),
+    date_modified=datetime(2025, 9, 5),
 )
