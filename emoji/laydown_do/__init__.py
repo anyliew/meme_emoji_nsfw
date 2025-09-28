@@ -48,7 +48,6 @@ add_meme(
     min_images=1,  # 需要的最小图片数量
     max_images=1,  # 需要的最大图片数量
     keywords=["躺撅"],  # 搜索关键词
-    tags=MemeTags.wuthering_waves,
     date_created=datetime(2025, 8, 21),  # 创建日期
     date_modified=datetime(2025, 8, 21),  # 修改日期
 )
