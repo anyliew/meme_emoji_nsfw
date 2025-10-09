@@ -3,17 +3,48 @@ from pathlib import Path
 import random
 
 from pil_utils import BuildImage
+from pydantic import Field
 
-from meme_generator import MemeArgsModel, add_meme
-from meme_generator.exception import TextOverLength
+from meme_generator import (
+    MemeArgsModel,
+    MemeArgsType,
+    ParserArg,
+    ParserOption,
+    add_meme,
+)
+from meme_generator.exception import TextOverLength, MemeFeedback
 from meme_generator.utils import make_jpg_or_gif
 
 img_dir = Path(__file__).parent / "images"
 
+help_text = "图片编号，范围为 1~25"
 
-def fleshlight_random(images: list[BuildImage], texts: list[str], args: MemeArgsModel):
-    # 随机选择一张背景图片 (0-24.png)
-    random_bg = random.randint(0, 24)
+
+class Model(MemeArgsModel):
+    number: int = Field(0, description=help_text)
+
+
+args_type = MemeArgsType(
+    args_model=Model,
+    parser_options=[
+        ParserOption(
+            names=["-n", "--number"],
+            args=[ParserArg(name="number", value="int")],
+            help_text=help_text,
+        ),
+    ],
+)
+
+
+def fleshlight_random(images: list[BuildImage], texts: list[str], args: Model):
+    total_num = 25
+    if args.number == 0:
+        random_bg = random.randint(1, total_num) - 1  # 转换为0-based索引
+    elif 1 <= args.number <= total_num:
+        random_bg = args.number - 1  # 转换为0-based索引
+    else:
+        raise MemeFeedback(f"图片编号错误，请选择 1~{total_num}")
+
     frame = BuildImage.open(img_dir / f"{random_bg}.png")
 
     ta = "他"
@@ -29,11 +60,11 @@ def fleshlight_random(images: list[BuildImage], texts: list[str], args: MemeArgs
     
     # 为不同的背景图片设置不同的文本位置（bbox: x1, y1, x2, y2）
     text_positions = [
-        (313, 40, 623, 104),    # 图片0.png的文本位置
+        (305, 1, 800, 133),    # 图片0.png的文本位置
         (533, 39, 779, 140),    # 图片1.png的文本位置
         (13, 1039, 430, 1189),   # 图片2.png的文本位置
         (40, 110, 374, 207),    # 图片3.png的文本位置
-        (13, 1039, 430, 1189),   # 图片4.png的文本位置
+        (686, 1100, 1200, 1200),   # 图片4.png的文本位置
         (55, 135, 812, 282),    # 图片5.png的文本位置
         (261, 31, 758, 91),     # 图片6.png的文本位置
         (566, 606, 764, 644),   # 图片7.png的文本位置
@@ -94,7 +125,7 @@ def fleshlight_random(images: list[BuildImage], texts: list[str], args: MemeArgs
             text_bbox,
             text,
             max_fontsize=100,
-            min_fontsize=20,
+            min_fontsize=5,
             lines_align="left",
             font_families=["FZShaoEr-M11S"],
             fill=text_color,  # 添加字体颜色参数
@@ -104,7 +135,7 @@ def fleshlight_random(images: list[BuildImage], texts: list[str], args: MemeArgs
 
     # 为不同的背景图片设置不同的头像位置和大小
     avatar_configs = [
-        {"position": (325, 110), "size": (165, 165)},   # 图片0.png的头像配置
+        {"position": (252, 133), "size": (300, 300)},   # 图片0.png的头像配置
         {"position": (65, 105), "size": (675, 675)},    # 图片1.png的头像配置
         {"position": (290, 20), "size": (920, 920)},    # 图片2.png的头像配置
         {"position": (202, 252), "size": (770, 770)},   # 图片3.png的头像配置
@@ -148,6 +179,7 @@ add_meme(
     max_images=1,
     min_texts=0,
     max_texts=1,
+    args_type=args_type,
     keywords=["随机杯子"],
     date_created=datetime(2025, 9, 2),
     date_modified=datetime(2025, 9, 2),
