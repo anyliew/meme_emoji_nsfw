@@ -1,7 +1,7 @@
 <div align="center">
 <img src="./docs/picture/logo.png" width=200 />
 
-# meme_emoji_nsfw
+# crazy_emoji
 
 <p align="center">
   <img src="https://img.shields.io/github/license/MemeCrafters/meme-generator" alt="license">
@@ -13,11 +13,11 @@
 </p>
 </div>
 
-## meme_emoji_nsfw 表情包扩展仓库 
+## crazy_emoji 表情包扩展仓库 
 
 *🚀* 基于 [meme-generator](https://github.com/MemeCrafters/meme-generator) 做的表情包扩展仓库~
 
-*✨* 为你的聊天机器人添加更多趣味表情生成！
+*✨* 为你的聊天机器人添加更多趣味逆天表情生成！
 
 > [!WARNING]
 >
@@ -55,7 +55,7 @@
 
 - ✨**搭配演示架构图所示(仅供参考)：**
 
-<img src="./docs/picture/meme_emoji_nsfw.jpg" alt="架构图" style="zoom:30%;" />
+<img src="./docs/picture/crazy_emoji.jpg" alt="架构图" style="zoom:30%;" />
 
 ## 🤠 表情示例
 
@@ -70,17 +70,17 @@
 
 #### 😉 名称排序  A-Z
 
-* [表情列表](https://github.com/anyliew/meme_emoji_nsfw/wiki/%E8%A1%A8%E6%83%85%E5%88%97%E8%A1%A8)
+* [表情列表](https://github.com/anyliew/crazy_emoji/wiki/%E8%A1%A8%E6%83%85%E5%88%97%E8%A1%A8)
 
 #### 🥰 时间排序  新-旧
 
-* [表情列表](https://github.com/anyliew/meme_emoji_nsfw/wiki/emoji_list)
+* [表情列表](https://github.com/anyliew/crazy_emoji/wiki/emoji_list)
 
   
 
 ## 📄 使用教程 
 
-- [meme_emoji_nsfw wiki](https://github.com/anyliew/meme_emoji_nsfw/wiki) 
+- [crazy_emoji wiki](https://github.com/anyliew/crazy_emoji/wiki) 
 
 
 ## ⚖ 许可证
@@ -89,16 +89,16 @@
 
 > MIT License https://github.com/MemeCrafters/meme-generator/blob/main/LICENSE
 > 
-> MIT License https://github.com/anyliew/meme_emoji_nsfw/blob/main/LICENSE
+> MIT License https://github.com/anyliew/crazy_emoji/blob/main/LICENSE
 > 
->chat.deepseek https://github.com/anyliew/meme_emoji_nsfw/raw/main/docs/picture/chat.deepseek.png)
+>chat.deepseek https://github.com/anyliew/crazy_emoji/raw/main/docs/picture/chat.deepseek.png)
 
 
 ## 💐 鸣谢
 
-感谢以下开发者对 meme_emoji_nsfw 仓库作出的贡献
+感谢以下开发者对 crazy_emoji 仓库作出的贡献
 
-<a href="https://github.com/anyliew/meme_emoji_nsfw/graphs/contributors">
+<a href="https://github.com/anyliew/crazy_emoji/graphs/contributors">
   <img src="./docs/picture/partner.jpg" />
 </a>
 
@@ -106,7 +106,7 @@
 
 ### 🤔 issues
 
-> issues https://github.com/anyliew/meme_emoji_nsfw/issues 
+> issues https://github.com/anyliew/crazy_emoji/issues 
 
 单个表情有问题反馈请附带日志和截图
 答复受限网络没那么快及时处理
@@ -137,10 +137,8 @@
 
 ### 额外表情仓库
 
-- [meme-generator-contrib](https://github.com/MemeCrafters/meme-generator-contrib) 
 - [meme_emoji](https://github.com/anyliew/meme_emoji) 
-- [meme-generator-jj](https://github.com/jinjiao007/meme-generator-jj) 
-- [meme_emoji_nsfw](https://github.com/anyliew/meme_emoji_nsfw) 
+- [crazy_emoji](https://github.com/anyliew/crazy_emoji) 
 
 
 ## 📌 免责声明
