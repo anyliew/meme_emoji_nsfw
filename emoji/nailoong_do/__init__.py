@@ -31,7 +31,7 @@ def nailoong_do(images: list[BuildImage], texts, args):
         frame_num = (i % 52) + 1
         frame = BuildImage.open(img_dir / f"{frame_num}.png").convert("RGBA")
         user_head = images[0].resize(sizes[i]).convert("RGBA")
-        user_head = user_head.rotate(-25, center=(user_head.width/2, user_head.height/2))
+        user_head = user_head.rotate(-45, center=(user_head.width/2, user_head.height/2))
         new_frame = BuildImage.new("RGBA", frame.size)
         new_frame.paste(user_head, positions[i], alpha=True)
         new_frame.paste(frame, (0, 0), alpha=True)
